@@ -1,5 +1,8 @@
 # Harnessing Unrecognizable Faces for Improving Face Recognition
 
+**Source**:
+https://arxiv.org/pdf/2106.04112.pdf
+
 **Insights**:
 
 Simple yet effective method can be used to clean training dataset. 
