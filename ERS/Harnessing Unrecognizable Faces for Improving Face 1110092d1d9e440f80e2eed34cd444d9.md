@@ -1,17 +1,12 @@
-# Unofficial implmentation of paper: Harnessing Unrecognizable Faces for Improving Face Recognition
+# Harnessing Unrecognizable Faces for Improving Face Recognition
 
-## source:
-```
-paper: https://arxiv.org/pdf/2106.04112.pdf
-```
-
-**insights**:
+**Insights**:
 
 Simple yet effective method can be used to clean training dataset. 
 
 **tl;dr**: based on the hypothesis and empirical observation that unrecognizable images embedding are more likely to join a common cluster such as: 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6a22bb08-b83a-41a8-b456-d63e5b7abc3d/ada85e76-50da-4689-8722-22ba84d2a0cd/Untitled.png)
+![Untitled](Harnessing%20Unrecognizable%20Faces%20for%20Improving%20Face%201110092d1d9e440f80e2eed34cd444d9/Untitled.png)
 
 Author based on this assumption proposed:
 
@@ -25,11 +20,11 @@ Author based on this assumption proposed:
 
 The normalized average embedding of UI images $f_{UI}$ , which we call the UI centroid (UIC), is then used to represent the UI. Given an embedding vector  $f_i$ , its ERS if image i $e_i$ is defined as
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6a22bb08-b83a-41a8-b456-d63e5b7abc3d/80904522-b6a7-44e9-8d9d-cd0c986e879e/Untitled.png)
+![Untitled](Harnessing%20Unrecognizable%20Faces%20for%20Improving%20Face%201110092d1d9e440f80e2eed34cd444d9/Untitled%201.png)
 
 During face identification, image can be filter using $e_i >=γ(0.60)$
 
 ### Implementation details
 
-We use the deep learning framework MXNet [2] in our model training and evaluation.
-We train a face embedding model using CosFace [34] loss, ResNet-101 (R101) [9] backbone and DeepGlintFace dataset (including MS1M-DeepGlint and AsianDeepGlint) [5]. HAC algorithm [4] is used to cluster extracted embeddings and generate UI clusters. We select threshold γ = 0.60 for ERS via cross-validation on the TinyFace [37] benchmark.
+We use the deep learning framework MXNet in our model training and evaluation.
+We train a face embedding model using CosFace loss, ResNet-101 (R101) backbone and DeepGlintFace dataset (including MS1M-DeepGlint and AsianDeepGlint). HAC algorithm is used to cluster extracted embeddings and generate UI clusters. We select threshold γ = 0.60 for ERS via cross-validation on the TinyFace benchmark.
