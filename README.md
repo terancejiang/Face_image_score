@@ -47,7 +47,7 @@ This parameter defines the number of processes to use for parallel computation, 
 `--fix-num`: This parameter is used to set a fixed number for feature comparison(Default: 24), more information check the original paper.
 
 ```python
-python sdd_fiqa.py --image-list-file /path/to/image_list.txt \
+python Generate_labels.py --image-list-file /path/to/image_list.txt \
                    --image-root /path/to/image_root \
                    --score-dst /path/to/score_dst \
                    --id-key-index -3 \
