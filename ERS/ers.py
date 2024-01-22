@@ -37,4 +37,6 @@ def calculate_ui_centroid(ui_embeddings):
 # Example usage:
 # Assume 'face_embedding' is the embedding of a face image
 # and 'ui_centroid' is the precomputed centroid of UI embeddings
+# ui_embeddings is a list of embedding vectors for UI images
+ui_centroid = calculate_ui_centroid(ui_embeddings)
 ers_score = calculate_ers(face_embedding, ui_centroid)
